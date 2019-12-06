@@ -1,7 +1,7 @@
 
 #results-container {
     float: left;
-    width: 26%;
+    width: 40%;
     padding: 10px;
     border:1px solid black;
     display: flex;
@@ -17,7 +17,7 @@
 
 #second-results {
     float: left;
-    width:74%;
+    width:60%;
     padding: 10px;
     border:1px solid black;
     flex: 50%;

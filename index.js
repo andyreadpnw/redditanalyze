@@ -182,13 +182,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
           ranker = j + 1;
           const redditCard = document.createElement('a');
-          const redditCardBreak = document.createElement('br');
           redditCard.href = `https://www.reddit.com/user/${sortedArray[j][0]}`;
           redditCard.classList.add('user-card');
           redditCard.innerText = `${ranker}. ${sortedArray[j][0]} = ${sortedArray[j][1]} post(s) - ${sortedArray[j][2]} points`;
 
           const container = document.getElementById('results-container');
-          container.append(redditCard, redditCardBreak)
+          container.append(redditCard)
         }}, 3000)
 
         window.onload = function () {
