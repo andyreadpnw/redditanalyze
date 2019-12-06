@@ -398,31 +398,28 @@ function piechart(ar){
     }
 
     function signUp(){
-        // const signupContainer = document.querySelector("body") 
+      const userNameInput = document.getElementById('usrLogin') 
         const loginContainer = document.getElementById("2a") 
-        let taco = document.getElementById("4a")
-        taco.addEventListener('click', event => {
+        let signupButton = document.getElementById("4a")
+        signupButton.addEventListener('click', event => {
             event.preventDefault();
-            // loginContainer.style.display = "none";
-            // const signUpDiv = document.createElement('div')
             const signUpH2 = document.createElement('h2')
             const singUpForm = document.getElementById('loginForm')
             signUpH2.innerHTML= "SignUp"
-            // const signUpinputName = document.createElement('input')
-            // signUpinputName.value =""
             const signUpinputUserName = document.createElement('input')
             const submit= document.createElement('button')
+            const signupDiv= document.createElement('div')
             submit.innerText="Submit"
             signUpinputUserName.value ="User Name"
-            singUpForm.appendChild(signUpH2)
-            singUpForm.appendChild(submit)
-            // singUpForm.appendChild(signUpinputName)
-            singUpForm.appendChild(signUpinputUserName)
-            // signUpDiv.appendChild(singUpForm)
-            // signupContainer.appendChild(signUpDiv)
+            signupDiv.appendChild(signUpH2)
+            signupDiv.appendChild(submit)
+            signupDiv.appendChild(signUpinputUserName)
+            singUpForm.appendChild(signupDiv)
             submit.addEventListener('click', function(e){
                 e.preventDefault();
+                userNameInput.value = signUpinputUserName.value
                 fetchSignup(signUpinputUserName.value)
+                signupDiv.style.display = "none"
             })
         })
     }
