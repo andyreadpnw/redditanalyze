@@ -321,6 +321,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       function top5Subreddit(listsubreddit){
         top5 = subredditsCount(listsubreddit).slice(0, 5)
+        if(top5.length < 5){
+          for(let i=top5.length; i<5; i++){
+            top5[i]=["",0]
+          }
+        }
         fav_sub = top5[0][0]
         console.log(fav_sub)
         return top5
