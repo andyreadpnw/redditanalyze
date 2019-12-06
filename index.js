@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
             afterParam ? '&after=' + afterParam : ''
           }`
         )
-        //console.log(response)
+        console.log(response)
         const responseJSON = await response.json();
         responses.push(responseJSON);
       
